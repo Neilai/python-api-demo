@@ -6,6 +6,8 @@ import re
 def processdatetime(x):
     today=datetime.date.today()
     year=today.year
+    x = x.lstrip()
+    x = x.rstrip()
 
     result = re.search(r"(\d+)秒前", x)
     if result:
